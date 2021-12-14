@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       
+    </head>
+    <body>
+<label id="lbl_counter">
+0
+</label>
+<br>
+
+<button type="button" id="btn_add">Add</button>
+<button type="button" id="btn_clear">Clear</button>
+    </body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCD-EmOx_Rt8G2UbEu8CHqYydcXL1wts0g",
+          authDomain: "counterproject-a65db.firebaseapp.com",
+          databaseURL: "https://counterproject-a65db-default-rtdb.firebaseio.com",
+          projectId: "counterproject-a65db",
+          storageBucket: "counterproject-a65db.appspot.com",
+          messagingSenderId: "942289494649",
+          appId: "1:942289494649:web:2123db3d73fe11e1096aa8",
+          measurementId: "${config.measurementId}"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        import {getDatabase,ref,set,get,child,update,remove}
+        from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"
+        const db = getDatabase();
+
+        function InsertData(labelValue){
+            set(ref(db,"counterValue/"+ "1"),{
+                GetCounter : labelValue,
+                Id : "1",
+               
+            }).then(()=>{
+            //  console.log("Submit Successfully");
+            }).catch((error)=>{
+                console.log("ERROR :"+error);
+            })
+        }
+
+        function UpdateData(labelValue){
+            update(ref(db,"counterValue/"+ "1"),{
+                GetCounter : labelValue,
+               
+            }).then(()=>{
+             // console.log("Submit Successfully");
+            }).catch((error)=>{
+                console.log("ERROR :"+error);
+            })
+        }
+
+        function SelectData(){
+            const dbref = ref(db);
+
+            get(child(dbref,"counterValue/"+ "1")).then((x)=>{
+                if(x.exists()){
+                    $("#lbl_counter").text(x.val().GetCounter);
+                }
+                else{
+                    //console.log("NO RECORD FOUND");
+                }
+            }).catch((error)=>{
+               console.log("ERROR :"+error);
+            });
+           
+        }
+
+        $(document).ready(function() {
+            SelectData();
+            $("#btn_add").click(function() 
+            {
+                var labelValue = $("#lbl_counter").text();
+                if(labelValue === 0){
+                   // console.log("IF BLOCK");
+                    InsertData(labelValue);
+                }
+                else{
+                   // console.log("ELSE BLOCK");
+                    var value = parseInt(labelValue)+1;
+                    UpdateData(value);
+                    SelectData();
+                }
+          
+                
+        });
+         });
+
+         $("#btn_clear").click(function(){
+            var confirmResult = confirm("Are you sure you want to clear all record?");
+            if (confirmResult == true) {
+                    UpdateData(0);
+                    SelectData();
+            } 
+             
+           
+         });
+      </script>
+    <script>
+        
+    </script>
+</html>
