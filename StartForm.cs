@@ -30,8 +30,8 @@ namespace QadamBoosi_App
         }
         private void btnStart_Click(object sender, EventArgs e)
         {
-            var timeValue = dtTime.Value.Date.Add(dtTime.Value.TimeOfDay); ;
-            QadamBoosiForm frm = new QadamBoosiForm(timeValue.ToString("hh:mm:ss"), nmTotal.Value.ToString());
+            var timeValue = dtTime.Value.Date.Add(dtTime.Value.TimeOfDay); 
+            QadamBoosiForm frm = new QadamBoosiForm(timeValue.ToString("hh:mm:ss"), nmTotal.Value.ToString(),txtName.Text);
             frm.ShowDialog();
         }
 
@@ -39,6 +39,13 @@ namespace QadamBoosi_App
         {
             
             
+        }
+
+        private void btnZiyafat_Click(object sender, EventArgs e)
+        {
+            var timeValue = dtTime.Value.Date.Add(dtTime.Value.TimeOfDay);
+            ZiyafatForm frm = new ZiyafatForm(timeValue.ToString("hh:mm:ss"), nmTotal.Value.ToString(),nmZiyafat.Value.ToString());
+            frm.Show();
         }
 
         DateTime dt = DateTime.Now;

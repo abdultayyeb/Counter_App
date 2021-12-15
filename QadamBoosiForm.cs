@@ -27,11 +27,12 @@ namespace QadamBoosi_App
 
         IFirebaseClient client;
 
-        public QadamBoosiForm(string startTime, string totalQadaboosi)
+        public QadamBoosiForm(string startTime, string totalQadaboosi, string labelName)
         {
             InitializeComponent();
             lblTime.Text = startTime;
             lblTotalQadaboosi.Text = totalQadaboosi;
+            lblName.Text = labelName;
             lblTotalQadaboosi.Font = new Font("Arial", 100, FontStyle.Bold);
             lblPending.Font = new Font("Arial", 100, FontStyle.Bold);
             lblCompleted.Font = new Font("Arial", 100, FontStyle.Bold);

@@ -37,18 +37,18 @@ namespace QadamBoosi_App
             this.lblPending = new System.Windows.Forms.Label();
             this.lblCompleted = new System.Windows.Forms.Label();
             this.tmDuration = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblTotalQadaboosi = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,7 +90,7 @@ namespace QadamBoosi_App
             // 
             this.lblPending.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblPending.Font = new System.Drawing.Font("Arial Black", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPending.ForeColor = System.Drawing.Color.MistyRose;
+            this.lblPending.ForeColor = System.Drawing.Color.Red;
             this.lblPending.Location = new System.Drawing.Point(1, 665);
             this.lblPending.Name = "lblPending";
             this.lblPending.Size = new System.Drawing.Size(1381, 338);
@@ -102,7 +102,7 @@ namespace QadamBoosi_App
             // 
             this.lblCompleted.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCompleted.Font = new System.Drawing.Font("Arial Black", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompleted.ForeColor = System.Drawing.Color.Yellow;
+            this.lblCompleted.ForeColor = System.Drawing.Color.Lime;
             this.lblCompleted.Location = new System.Drawing.Point(1366, 674);
             this.lblCompleted.Name = "lblCompleted";
             this.lblCompleted.Size = new System.Drawing.Size(1381, 338);
@@ -115,29 +115,18 @@ namespace QadamBoosi_App
             this.tmDuration.Interval = 1000;
             this.tmDuration.Tick += new System.EventHandler(this.tmDuration_Tick);
             // 
-            // pictureBox1
+            // lblName
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(267, 244);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(1, 984);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(2749, 175);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "TOTAL QADAMBOOSI";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblName.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold);
+            this.lblName.ForeColor = System.Drawing.Color.Yellow;
+            this.lblName.Location = new System.Drawing.Point(1, 984);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(2749, 175);
+            this.lblName.TabIndex = 12;
+            this.lblName.Text = "TOTAL QADAMBOSI";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -149,6 +138,44 @@ namespace QadamBoosi_App
             this.label2.TabIndex = 13;
             this.label2.Text = "START TIME";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTotalQadaboosi
+            // 
+            this.lblTotalQadaboosi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotalQadaboosi.Font = new System.Drawing.Font("Arial Black", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalQadaboosi.ForeColor = System.Drawing.Color.Yellow;
+            this.lblTotalQadaboosi.Location = new System.Drawing.Point(1, 1113);
+            this.lblTotalQadaboosi.Name = "lblTotalQadaboosi";
+            this.lblTotalQadaboosi.Size = new System.Drawing.Size(2749, 338);
+            this.lblTotalQadaboosi.TabIndex = 15;
+            this.lblTotalQadaboosi.Text = "label4";
+            this.lblTotalQadaboosi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Lime;
+            this.label4.Location = new System.Drawing.Point(1366, 526);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(1381, 139);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "COMPLETED";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(1, 526);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(1381, 139);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "PENDING";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // panel3
             // 
@@ -164,6 +191,17 @@ namespace QadamBoosi_App
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(270, 255);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(267, 244);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -193,44 +231,6 @@ namespace QadamBoosi_App
             this.label3.Text = "DURATION";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblTotalQadaboosi
-            // 
-            this.lblTotalQadaboosi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotalQadaboosi.Font = new System.Drawing.Font("Arial Black", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalQadaboosi.ForeColor = System.Drawing.Color.Lime;
-            this.lblTotalQadaboosi.Location = new System.Drawing.Point(1, 1113);
-            this.lblTotalQadaboosi.Name = "lblTotalQadaboosi";
-            this.lblTotalQadaboosi.Size = new System.Drawing.Size(2749, 338);
-            this.lblTotalQadaboosi.TabIndex = 15;
-            this.lblTotalQadaboosi.Text = "label4";
-            this.lblTotalQadaboosi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(1366, 526);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1381, 139);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "COMPLETED";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.MistyRose;
-            this.label5.Location = new System.Drawing.Point(1, 526);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1381, 139);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "PENDING";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click_1);
-            // 
             // QadamBoosiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -242,7 +242,7 @@ namespace QadamBoosi_App
             this.Controls.Add(this.lblTotalQadaboosi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblCompleted);
             this.Controls.Add(this.lblPending);
             this.Controls.Add(this.btnStart);
@@ -254,8 +254,8 @@ namespace QadamBoosi_App
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QadamBoosiForm_FormClosed);
             this.Load += new System.EventHandler(this.QadamBoosiForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -268,15 +268,15 @@ namespace QadamBoosi_App
         private System.Windows.Forms.Label lblCompleted;
         private System.Windows.Forms.Timer tmDuration;
         private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTotalQadaboosi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label3;
     }
 }
